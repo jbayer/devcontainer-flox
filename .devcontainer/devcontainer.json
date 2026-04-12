@@ -1,0 +1,19 @@
+{
+  "name": "Dev Container Example",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,readonly"
+  ],
+  "postCreateCommand": "echo 'Dev container ready!'",
+  "remoteUser": "vscode"
+}
