@@ -7,7 +7,9 @@
       "WebFetch(domain:flox.dev)",
       "WebFetch(domain:github.com)",
       "Bash(gh repo:*)",
-      "Bash(gh api:*)"
+      "Bash(gh api:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)"
     ]
   }
 }
