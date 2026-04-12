@@ -9,7 +9,9 @@
       "Bash(gh repo:*)",
       "Bash(gh api:*)",
       "Bash(git remote:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(rm /Users/jamesbayer/workspaces/devcontainers/.vscode/settings.json)",
+      "Bash(rmdir /Users/jamesbayer/workspaces/devcontainers/.vscode)"
     ]
   }
 }
