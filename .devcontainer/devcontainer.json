@@ -8,7 +8,7 @@
     "vscode": {
       "extensions": [
         "ms-azuretools.vscode-docker",
-        "flox.flox-vscode"
+        "flox.flox"
       ]
     }
   },
