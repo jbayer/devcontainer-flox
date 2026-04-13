@@ -2,9 +2,46 @@
 
 A Docker image with [Flox](https://flox.dev) pre-installed, ready to use as a [Dev Container](https://containers.dev/) base image. This provides a reproducible development environment where Flox manages your project dependencies inside a container.
 
+This example container includes Claude Code as part of the flox environment.
+
+## Quick start
+
+1. Open this repository in VS Code.
+2. Run **"Dev Containers: Reopen in Container"** from the command palette.
+3. The terminal in vscode should be flox activated by default:
+
+```bash
+flox --version
+
+flox list
+# should see hello as a package
+
+hello
+# should print-out the greeting from the flox package hello
+```
+
+To get a shell into this container from your main OS, use 
+```sh
+# substitute your project directory path
+ devcontainer exec --workspace-folder <YOUR_PROJECT_PATH_PREFIX>/devcontainers bash
+```
+
+### Claude Code
+
+The flox environment for this project includes Claude Code. 
+
+The first time you start claude, it needs to setup global 
+settings and authentication. Subsequent restarts will use 
+the settings from the docker volume and should persist.
+
+```sh
+# launch claude code from a shell that has been flox activated
+claude
+```
+
 ## What's included
 
-- **Dockerfile** — Builds an Ubuntu-based image with Flox installed via the official `.deb` package. Includes workarounds for running Nix inside containers (see below).
+- **Dockerfile** — Builds an Ubuntu 26.04 image with Flox installed via the official `.deb` package. Includes workarounds for running Nix inside containers (see below).
 - **`.devcontainer/devcontainer.json`** — Dev Container configuration tuned for Flox and Nix compatibility.
 
 ## Nix and container workarounds
@@ -64,19 +101,3 @@ This repository is a starting point. You can modify it to fit your needs:
 - **`devcontainer.json`** — Add VS Code extensions, change the `postCreateCommand` to run project setup (e.g., `flox install` from a checked-in `manifest.toml`), or add additional mounts and environment variables.
 - **Flox environment** — Run `flox init` and `flox install <package>` inside the container to build up your environment, then commit the `.flox/` directory so teammates get the same dependencies automatically.
 
-## Quick start
-
-1. Open this repository in VS Code.
-2. Run **"Dev Containers: Reopen in Container"** from the command palette.
-3. Once inside the container:
-
-```bash
-flox --version
-
-
-flox list
-# should see hello as a package
-
-hello
-# should print-out the greeting from the flox package hello
-```
