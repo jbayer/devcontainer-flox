@@ -14,7 +14,8 @@
   },
   "mounts": [
     "source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,readonly",
-    "source=nix-store,target=/nix,type=volume"
+    "source=nix-store,target=/nix,type=volume",
+    "source=floxuser-home,target=/home/floxuser,type=volume"
   ],
   "postCreateCommand": "echo 'Dev container ready!'",
   "remoteUser": "floxuser"

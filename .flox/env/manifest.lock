@@ -3,6 +3,10 @@
   "manifest": {
     "schema-version": "1.11.0",
     "install": {
+      "claude-code": {
+        "pkg-path": "flox/claude-code",
+        "pkg-group": "claude-code"
+      },
       "hello": {
         "pkg-path": "hello"
       }
@@ -126,6 +130,130 @@
       },
       "system": "x86_64-linux",
       "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "claude-code",
+      "broken": false,
+      "derivation": "/nix/store/76x6s272cpxmx9jqcc6vddpvgrwd4p2k-claude-code-2.1.101.drv",
+      "description": "Agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster",
+      "install_id": "claude-code",
+      "license": "Unfree",
+      "locked_url": "https://github.com/barstoolbluz/nix-ai-tools?rev=acff64f25d99732babe403cf7e7b8543321f3ff8",
+      "name": "claude-code-2.1.101",
+      "pname": "claude-code",
+      "rev": "acff64f25d99732babe403cf7e7b8543321f3ff8",
+      "rev_count": 1,
+      "rev_date": "2026-04-11T05:26:41Z",
+      "scrape_date": "2026-04-12T17:57:14.703975501Z",
+      "stabilities": [
+        "unstable",
+        "staging",
+        "stable"
+      ],
+      "unfree": true,
+      "version": "2.1.101",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/kk1lahm74xycvz89d4yb17h65mnzzzhc-claude-code-2.1.101"
+      },
+      "system": "aarch64-darwin",
+      "group": "claude-code",
+      "priority": 5
+    },
+    {
+      "attr_path": "claude-code",
+      "broken": false,
+      "derivation": "/nix/store/4qm1391w4zvdgzlhmlk7q9p3n4hjypyb-claude-code-2.1.101.drv",
+      "description": "Agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster",
+      "install_id": "claude-code",
+      "license": "Unfree",
+      "locked_url": "https://github.com/barstoolbluz/nix-ai-tools?rev=acff64f25d99732babe403cf7e7b8543321f3ff8",
+      "name": "claude-code-2.1.101",
+      "pname": "claude-code",
+      "rev": "acff64f25d99732babe403cf7e7b8543321f3ff8",
+      "rev_count": 1,
+      "rev_date": "2026-04-11T05:26:41Z",
+      "scrape_date": "2026-04-12T17:57:14.703979876Z",
+      "stabilities": [
+        "unstable",
+        "staging",
+        "stable"
+      ],
+      "unfree": true,
+      "version": "2.1.101",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/5cn56fadhykk4j9ng0vw5f35nkvb7l77-claude-code-2.1.101"
+      },
+      "system": "aarch64-linux",
+      "group": "claude-code",
+      "priority": 5
+    },
+    {
+      "attr_path": "claude-code",
+      "broken": false,
+      "derivation": "/nix/store/kw7xq46zi1llfmjif85k45wmx4kiyb4s-claude-code-2.1.101.drv",
+      "description": "Agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster",
+      "install_id": "claude-code",
+      "license": "Unfree",
+      "locked_url": "git@github.com:barstoolbluz/nix-ai-tools.git?rev=934ceb6d6ebe3cd9a14ddb27dde168a47809edcb",
+      "name": "claude-code-2.1.101",
+      "pname": "claude-code",
+      "rev": "934ceb6d6ebe3cd9a14ddb27dde168a47809edcb",
+      "rev_count": 171,
+      "rev_date": "2026-04-11T06:49:20Z",
+      "scrape_date": "2026-04-12T17:57:14.703980376Z",
+      "stabilities": [
+        "unstable",
+        "staging",
+        "stable"
+      ],
+      "unfree": true,
+      "version": "2.1.101",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/90b3rsj62qqm610q6v9kghxdamyx625a-claude-code-2.1.101"
+      },
+      "system": "x86_64-darwin",
+      "group": "claude-code",
+      "priority": 5
+    },
+    {
+      "attr_path": "claude-code",
+      "broken": false,
+      "derivation": "/nix/store/n71zy47w2h82yi9rxgf2286a15ixxsyk-claude-code-2.1.101.drv",
+      "description": "Agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster",
+      "install_id": "claude-code",
+      "license": "Unfree",
+      "locked_url": "https://github.com/barstoolbluz/nix-ai-tools?rev=acff64f25d99732babe403cf7e7b8543321f3ff8",
+      "name": "claude-code-2.1.101",
+      "pname": "claude-code",
+      "rev": "acff64f25d99732babe403cf7e7b8543321f3ff8",
+      "rev_count": 1,
+      "rev_date": "2026-04-11T05:26:41Z",
+      "scrape_date": "2026-04-12T17:57:14.703980793Z",
+      "stabilities": [
+        "unstable",
+        "staging",
+        "stable"
+      ],
+      "unfree": true,
+      "version": "2.1.101",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/pshrbnwqgamcphgwmpfk63ahzg1zgf3b-claude-code-2.1.101"
+      },
+      "system": "x86_64-linux",
+      "group": "claude-code",
       "priority": 5
     }
   ]
