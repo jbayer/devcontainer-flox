@@ -4,6 +4,8 @@ A Docker image with [Flox](https://flox.dev) pre-installed, ready to use as a [D
 
 This example container includes Claude Code as part of the flox environment.
 
+This is a really great local development experience with container isolation.
+
 ## Why a dev container with Flox?
 
 Running VS Code directly on your host OS means every dependency you install — npm packages, PyPI wheels, Homebrew formulas, `curl | bash` installers, VS Code extensions, even the AI coding agents themselves — executes with full access to your host operating system. That includes your SSH keys, browser cookies, cloud credentials in `~/.aws` and `~/.config`, password manager state, and everything else in your home directory. Modern development stacks pull in hundreds or thousands of transitive dependencies from package managers (npm, pip, cargo, go modules, RubyGems) that have repeatedly been the target of real-world supply chain attacks: typosquatting, maintainer account takeovers, malicious post-install scripts, and dependency confusion. A single compromised package in a deep dependency tree can exfiltrate secrets or install a backdoor before you ever run the code yourself.
