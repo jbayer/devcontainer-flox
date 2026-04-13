@@ -4,6 +4,19 @@ A Docker image with [Flox](https://flox.dev) pre-installed, ready to use as a [D
 
 This example container includes Claude Code as part of the flox environment.
 
+## Why a dev container with Flox?
+
+Running VS Code directly on your host OS means every dependency you install — npm packages, PyPI wheels, Homebrew formulas, `curl | bash` installers, VS Code extensions, even the AI coding agents themselves — executes with full access to your host operating system. That includes your SSH keys, browser cookies, cloud credentials in `~/.aws` and `~/.config`, password manager state, and everything else in your home directory. Modern development stacks pull in hundreds or thousands of transitive dependencies from package managers (npm, pip, cargo, go modules, RubyGems) that have repeatedly been the target of real-world supply chain attacks: typosquatting, maintainer account takeovers, malicious post-install scripts, and dependency confusion. A single compromised package in a deep dependency tree can exfiltrate secrets or install a backdoor before you ever run the code yourself.
+
+A dev container puts a meaningful isolation boundary between that code and your workstation:
+
+- **Blast radius containment** — Malicious post-install scripts, compromised build tools, or a rogue AI agent running `rm -rf` only see the container's filesystem, not your host home directory.
+- **No ambient credentials** — Your host's cloud tokens, browser sessions, and keychains aren't visible inside the container. SSH keys are mounted read-only and only when you opt in.
+- **Disposable and reproducible** — If something goes wrong (or you just want to be sure), you can rebuild the container from scratch in seconds. Your host stays clean.
+- **Flox on top of that** — Flox (built on Nix) gives you pinned, reproducible versions of language runtimes and tools *inside* the container, so you're not layering `curl | bash` installs on top of an isolation boundary you just created. The same `manifest.toml` produces the same environment for every teammate, with a full audit trail of what's installed.
+
+The combination — container isolation for blast radius, Flox for reproducible declarative dependencies — means you can try new tools, run untrusted code, and let coding agents operate more autonomously without putting your workstation at risk.
+
 ## Quick start
 
 1. Open this repository in VS Code.
@@ -23,8 +36,10 @@ hello
 To get a shell into this container from your main OS, use 
 ```sh
 # substitute your project directory path
- devcontainer exec --workspace-folder <YOUR_PROJECT_PATH_PREFIX>/devcontainers bash
+ devcontainer exec --workspace-folder /Users/jamesbayer/workspaces/devcontainers bash
 ```
+
+I have added `devcontainer` as a package to my default flox environment.
 
 ### Claude Code
 
@@ -32,7 +47,8 @@ The flox environment for this project includes Claude Code.
 
 The first time you start claude, it needs to setup global 
 settings and authentication. Subsequent restarts will use 
-the settings from the docker volume and should persist.
+the settings from the docker volume and should persist unless the 
+docker volume is reset.
 
 ```sh
 # launch claude code from a shell that has been flox activated
