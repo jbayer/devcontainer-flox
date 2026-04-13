@@ -11,7 +11,6 @@ hello.pkg-path = "hello"
 claude-code.pkg-path = "flox/claude-code"
 claude-code.pkg-group = "claude-code"
 vim.pkg-path = "vim"
-git.pkg-path = "git"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 
