@@ -17,6 +17,6 @@
     "source=nix-store,target=/nix,type=volume",
     "source=floxuser-home,target=/home/floxuser,type=volume"
   ],
-  "postCreateCommand": "echo 'Dev container ready!'",
+  "postStartCommand": "flox activate -d ${containerWorkspaceFolder}",
   "remoteUser": "floxuser"
 }

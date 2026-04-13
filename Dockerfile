@@ -30,6 +30,9 @@ ENV NIX_REMOTE=auto
 USER floxuser
 WORKDIR /home/floxuser
 
+# 5. Auto-activate Flox environment if present in the working directory
+RUN echo 'if [ -f .flox/env/manifest.toml ]; then eval "$(flox activate)"; fi' >> /home/floxuser/.bashrc
+
 # Verify the installation
 RUN flox --version
 

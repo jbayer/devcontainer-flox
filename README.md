@@ -19,9 +19,32 @@ Flox uses Nix under the hood, and Nix normally relies on a daemon (`nix-daemon`)
 The `devcontainer.json` includes several settings for a smooth experience:
 
 - **Named Docker volume for `/nix`** — A persistent volume (`nix-store`) is mounted at `/nix` so that packages installed via `flox install` survive container rebuilds. Without this, every rebuild would require re-downloading all Nix store paths.
+- **Named Docker volume for `/home/floxuser`** — The entire home directory is persisted so that shell history, Claude Code authentication, and other user-level configuration survive container rebuilds.
 - **SSH key forwarding** — Your host `~/.ssh` directory is bind-mounted (read-only) into the container so that Git commit signing and SSH-based remotes work transparently.
 - **Git feature** — The Dev Container `git` feature is included to manage the Git version independently of the base image.
 - **Non-root user** — The container runs as `floxuser` rather than root, following security best practices.
+
+## Automatic Flox activation
+
+The Dockerfile adds a line to `.bashrc` that automatically runs `flox activate` when a Flox environment exists in the current working directory. Any interactive bash shell — whether from VS Code's integrated terminal, `devcontainer exec`, or `docker exec` — will activate the environment without any manual steps.
+
+This is detected by checking for `.flox/env/manifest.toml` in the working directory. If no Flox environment is present, the shell starts normally.
+
+## Building the Docker image
+
+To rebuild the image after making changes to the Dockerfile:
+
+```bash
+docker build -t jbayer/devcontainer-flox:latest .
+docker push jbayer/devcontainer-flox:latest
+```
+
+After pushing, rebuild the dev container in VS Code via **"Dev Containers: Rebuild Container"** from the command palette to pick up the new image.
+
+> **Note:** The persistent volumes for `/nix` and `/home/floxuser` will retain their existing contents across image updates. If you need a clean slate (e.g., after a Flox version upgrade in the Dockerfile), delete the volumes manually:
+> ```bash
+> docker volume rm nix-store floxuser-home
+> ```
 
 ## Using the pre-built image
 
