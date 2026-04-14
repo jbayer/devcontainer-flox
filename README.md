@@ -1,16 +1,14 @@
-# Flox Dev Container
+# Dev Container for Flox
 
-A Docker image with [Flox](https://flox.dev) pre-installed, ready to use as a [Dev Container](https://containers.dev/) base image. This provides a reproducible development environment where Flox manages your project dependencies inside a container.
+**Goal:** frictionless local development using Linux container isolation for untrusted scenarios including package manager commands and using AI agents like Claude Code.
 
-This example container includes Claude Code as part of the flox environment.
-
-This is a really great local development experience with container isolation.
+This project includes a Dockerfile for an Ubuntu 26.04 container image to be used as a [Dev Container](https://containers.dev/) base image with [Flox](https://flox.dev) pre-installed. The flox environment in this repository includes Claude Code to demonstrate using AI agents inside the container.
 
 ## Why a dev container with Flox?
 
-Running VS Code directly on your host OS means every dependency you install — npm packages, PyPI wheels, Homebrew formulas, `curl | bash` installers, VS Code extensions, even the AI coding agents themselves — executes with full access to your host operating system. That includes your SSH keys, browser cookies, cloud credentials in `~/.aws` and `~/.config`, password manager state, and everything else in your home directory. Modern development stacks pull in hundreds or thousands of transitive dependencies from package managers (npm, pip, cargo, go modules, RubyGems) that have repeatedly been the target of real-world supply chain attacks: typosquatting, maintainer account takeovers, malicious post-install scripts, and dependency confusion. A single compromised package in a deep dependency tree can exfiltrate secrets or install a backdoor before you ever run the code yourself.
+Running code directly on your host OS means every dependency you install — npm packages, PyPI wheels, Homebrew formulas, `curl | bash` installers, VS Code extensions, even the AI coding agents themselves — executes with full access to your host operating system. That includes your SSH keys, browser cookies, cloud credentials in `~/.aws` and `~/.config`, password manager state, and everything else in your home directory. Modern development stacks pull in hundreds or thousands of transitive dependencies from package managers (npm, pip, cargo, go modules, RubyGems) that have repeatedly been the target of real-world supply chain attacks: typosquatting, maintainer account takeovers, malicious post-install scripts, and dependency confusion. A single compromised package in a deep dependency tree can exfiltrate secrets or install a backdoor before you ever run the code yourself.
 
-A dev container puts a meaningful isolation boundary between that code and your workstation:
+A dev container puts a meaningful isolation boundary between unstrusted code and your primary workstation:
 
 - **Blast radius containment** — Malicious post-install scripts, compromised build tools, or a rogue AI agent running `rm -rf` only see the container's filesystem, not your host home directory.
 - **No ambient credentials** — Your host's cloud tokens, browser sessions, and keychains aren't visible inside the container. SSH keys are mounted read-only and only when you opt in.
@@ -21,11 +19,11 @@ The combination — container isolation for blast radius, Flox for reproducible 
 
 ## Quick start
 
-1. Open this repository in VS Code.
+1. Open this repository in a devcontainer compatible IDE like VS Code.
 2. Run **"Dev Containers: Reopen in Container"** from the command palette.
-3. The terminal in vscode should be flox activated by default:
+3. The terminal in VS Code should be flox activated by default:
 
-```bash
+```sh
 flox --version
 
 flox list
@@ -35,13 +33,66 @@ hello
 # should print-out the greeting from the flox package hello
 ```
 
-To get a shell into this container from your main OS, use 
+To shell into the container while in the project directory 
 ```sh
 # substitute your project directory path
- devcontainer exec --workspace-folder /Users/jamesbayer/workspaces/devcontainers bash
+ devcontainer exec --workspace-folder . bash
 ```
 
-I have added `devcontainer` as a package to my default flox environment.
+I use `devcontainer` as a package with [my default flox environment](https://hub.flox.dev/jbayer/default) on my host OS.
+
+### Auto-start and shell in on `cd`
+
+For a low-friction workflow, you can have your shell automatically start the dev container and drop you into it whenever you `cd` into a project directory that contains a `.devcontainer/` folder.
+
+**Zsh** (`~/.zshrc`) — uses the built-in `chpwd` hook that fires on every directory change:
+
+```sh
+# automatically start a devcontainer via directory navigation
+chpwd() {
+  if [ -d ".devcontainer" ] && [ -z "$INSIDE_DEVCONTAINER" ]; then
+    echo "🐳 Starting devcontainer and connecting..."
+    devcontainer up --workspace-folder . && \
+    INSIDE_DEVCONTAINER=1 devcontainer exec --workspace-folder . bash
+  fi
+}
+```
+
+**Bash** (`~/.bashrc` or `~/.bash_profile`) — bash has no native `chpwd`, so wrap `cd` in a function:
+
+```sh
+# automatically start a devcontainer via directory navigation
+cd() {
+  builtin cd "$@" || return
+  if [ -d ".devcontainer" ] && [ -z "$INSIDE_DEVCONTAINER" ]; then
+    echo "🐳 Starting devcontainer and connecting..."
+    devcontainer up --workspace-folder . && \
+      INSIDE_DEVCONTAINER=1 devcontainer exec --workspace-folder . bash
+  fi
+}
+```
+
+**Fish** (`~/.config/fish/config.fish`) — fish emits a `PWD` variable event you can hook:
+
+```fish
+# automatically start a devcontainer via directory navigation
+function __devcontainer_autostart --on-variable PWD
+    if test -d .devcontainer; and test -z "$INSIDE_DEVCONTAINER"
+        echo "🐳 Starting devcontainer and connecting..."
+        devcontainer up --workspace-folder .
+        and INSIDE_DEVCONTAINER=1 devcontainer exec --workspace-folder . bash
+    end
+end
+```
+
+How it works (applies to all three):
+
+- The hook runs every time the working directory changes: `chpwd` in zsh, a `cd` wrapper in bash, and a `PWD` variable listener in fish.
+- The `.devcontainer` check scopes the behavior to project directories that actually define a dev container.
+- `INSIDE_DEVCONTAINER` guards against recursive activation — once you're inside the container shell, `cd`-ing around won't trigger another `devcontainer up`.
+- `devcontainer up` is idempotent: if the container is already running, it reuses it; otherwise it starts one. Then `devcontainer exec ... bash` drops you into an interactive shell (which, combined with the automatic `flox activate` in `.bashrc`, lands you in a fully activated Flox environment).
+
+When you `exit` the container shell, you're back on your host in the same directory.
 
 ### Claude Code
 
@@ -53,14 +104,22 @@ the settings from the docker volume and should persist unless the
 docker volume is reset.
 
 ```sh
-# launch claude code from a shell that has been flox activated
+# launch claude code from a shell in the container that has been flox activated
 claude
+```
+
+With Claude running in a container, there risk is lower to skip frequent permissions checks.
+
+```sh
+# launch claude code from a shell in the container that has been flox activated
+claude --dangerously-skip-permissions
 ```
 
 ## What's included
 
 - **Dockerfile** — Builds an Ubuntu 26.04 image with Flox installed via the official `.deb` package. Includes workarounds for running Nix inside containers (see below).
 - **`.devcontainer/devcontainer.json`** — Dev Container configuration tuned for Flox and Nix compatibility.
+- **`.flox`** - Example flox environment with several packages.
 
 ## Nix and container workarounds
 
