@@ -1,4 +1,4 @@
-# Dev Container for Flox!
+# Dev Container for Flox
 
 **Goal:** frictionless local development using Linux container isolation for untrusted scenarios including package manager commands and using AI agents like Claude Code.
 
