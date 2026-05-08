@@ -149,8 +149,8 @@ This is detected by checking for `.flox/env/manifest.toml` in the working direct
 To rebuild the image after making changes to the Dockerfile:
 
 ```bash
-docker build -t jbayer/devcontainer-flox:latest .
-docker push jbayer/devcontainer-flox:latest
+docker build -t jbayer/devcontainer-flox:1.12.0 -t jbayer/devcontainer-flox:latest -t  .
+docker push  --all-tags jbayer/devcontainer-flox
 ```
 
 After pushing, rebuild the dev container in VS Code via **"Dev Containers: Rebuild Container"** from the command palette to pick up the new image.

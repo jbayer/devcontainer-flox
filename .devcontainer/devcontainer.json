@@ -1,9 +1,8 @@
 {
   "name": "Dev Container Example",
-  "image": "jbayer/devcontainer-flox:latest",
+  "image": "jbayer/devcontainer-flox:1.12.0@sha256:adf2f6932dcc73519c14ceb0efebe1182739d25de7c41ef4d46caf8073eace1a",
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
-  },
+      },
   "customizations": {
     "vscode": {
       "extensions": [
