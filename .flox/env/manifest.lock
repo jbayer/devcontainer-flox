@@ -22,27 +22,27 @@
     {
       "attr_path": "claude-code",
       "broken": false,
-      "derivation": "/nix/store/gia4w31ryafc6rlf2f3qdnzxwvf30x4w-claude-code-2.1.133.drv",
+      "derivation": "/nix/store/8l2hay17dh0f2cnqdiww3h716nl078n9-claude-code-2.1.141.drv",
       "description": "Agentic coding tool from Anthropic",
       "install_id": "claude-code",
       "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=b3eeaae770de4e7ba30d326f2d4d4ae0899f1e40",
-      "name": "claude-code-2.1.133",
+      "locked_url": "https://github.com/flox/floxenvs?rev=bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
+      "name": "claude-code-2.1.141",
       "pname": "claude-code",
-      "rev": "b3eeaae770de4e7ba30d326f2d4d4ae0899f1e40",
-      "rev_count": 3065,
-      "rev_date": "2026-05-08T13:08:54Z",
-      "scrape_date": "2026-05-08T17:45:43.188379838Z",
+      "rev": "bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
+      "rev_count": 3327,
+      "rev_date": "2026-05-14T10:08:55Z",
+      "scrape_date": "2026-05-18T16:20:37.854934381Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": true,
-      "version": "2.1.133",
+      "version": "2.1.141",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/ln1097mihnc8qa45k50xzhmhna16crip-claude-code-2.1.133"
+        "out": "/nix/store/gckpbs4vk8wyfgarr8w6wz53ykhxzbw1-claude-code-2.1.141"
       },
       "system": "aarch64-darwin",
       "group": "claude-code",
@@ -51,27 +51,27 @@
     {
       "attr_path": "claude-code",
       "broken": false,
-      "derivation": "/nix/store/y1pyv59g0qvsjnxsgg9n04gsj9sfxzrg-claude-code-2.1.133.drv",
+      "derivation": "/nix/store/lg349nwky5rgl7gnmqyxzwagcwdp9x5h-claude-code-2.1.141.drv",
       "description": "Agentic coding tool from Anthropic",
       "install_id": "claude-code",
       "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=b3eeaae770de4e7ba30d326f2d4d4ae0899f1e40",
-      "name": "claude-code-2.1.133",
+      "locked_url": "https://github.com/flox/floxenvs?rev=bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
+      "name": "claude-code-2.1.141",
       "pname": "claude-code",
-      "rev": "b3eeaae770de4e7ba30d326f2d4d4ae0899f1e40",
-      "rev_count": 3065,
-      "rev_date": "2026-05-08T13:08:54Z",
-      "scrape_date": "2026-05-08T17:45:43.188384547Z",
+      "rev": "bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
+      "rev_count": 3327,
+      "rev_date": "2026-05-14T10:08:55Z",
+      "scrape_date": "2026-05-18T16:20:37.854940797Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": true,
-      "version": "2.1.133",
+      "version": "2.1.141",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/v5j5ch81sk49mp5qzpg5s380aqxxi9vy-claude-code-2.1.133"
+        "out": "/nix/store/gdzh2ynafj30iz3gvmplcrch92sgarm0-claude-code-2.1.141"
       },
       "system": "aarch64-linux",
       "group": "claude-code",
@@ -80,27 +80,27 @@
     {
       "attr_path": "claude-code",
       "broken": false,
-      "derivation": "/nix/store/l18dpsgk7ji5cp4rwhm5fpnfck505jkr-claude-code-2.1.133.drv",
+      "derivation": "/nix/store/ngx8rhlnfnxlfdjqwhawi5pri4ykd83f-claude-code-2.1.141.drv",
       "description": "Agentic coding tool from Anthropic",
       "install_id": "claude-code",
       "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=b3eeaae770de4e7ba30d326f2d4d4ae0899f1e40",
-      "name": "claude-code-2.1.133",
+      "locked_url": "https://github.com/flox/floxenvs?rev=bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
+      "name": "claude-code-2.1.141",
       "pname": "claude-code",
-      "rev": "b3eeaae770de4e7ba30d326f2d4d4ae0899f1e40",
-      "rev_count": 3065,
-      "rev_date": "2026-05-08T13:08:54Z",
-      "scrape_date": "2026-05-08T17:45:43.188385713Z",
+      "rev": "bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
+      "rev_count": 3327,
+      "rev_date": "2026-05-14T10:08:55Z",
+      "scrape_date": "2026-05-18T16:20:37.854942006Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": true,
-      "version": "2.1.133",
+      "version": "2.1.141",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/l2jc792ywn5l44jilld025la3z32ydzv-claude-code-2.1.133"
+        "out": "/nix/store/ijkl9clcsgp9fvzg4qjb5xnv0v8gmkny-claude-code-2.1.141"
       },
       "system": "x86_64-darwin",
       "group": "claude-code",
@@ -109,27 +109,27 @@
     {
       "attr_path": "claude-code",
       "broken": false,
-      "derivation": "/nix/store/8hg4qqgw2jz9m6a1y32p496g5ryv6fmp-claude-code-2.1.133.drv",
+      "derivation": "/nix/store/f5p3akgnffldplwk394l5b27r499syxb-claude-code-2.1.141.drv",
       "description": "Agentic coding tool from Anthropic",
       "install_id": "claude-code",
       "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=b3eeaae770de4e7ba30d326f2d4d4ae0899f1e40",
-      "name": "claude-code-2.1.133",
+      "locked_url": "https://github.com/flox/floxenvs?rev=bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
+      "name": "claude-code-2.1.141",
       "pname": "claude-code",
-      "rev": "b3eeaae770de4e7ba30d326f2d4d4ae0899f1e40",
-      "rev_count": 3065,
-      "rev_date": "2026-05-08T13:08:54Z",
-      "scrape_date": "2026-05-08T17:45:43.188386213Z",
+      "rev": "bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
+      "rev_count": 3327,
+      "rev_date": "2026-05-14T10:08:55Z",
+      "scrape_date": "2026-05-18T16:20:37.854943131Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": true,
-      "version": "2.1.133",
+      "version": "2.1.141",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/7lq8k29h4an8r6dhnii5hz8a6ka01pab-claude-code-2.1.133"
+        "out": "/nix/store/n69zkbh80r7d9c7lw5wny45qg8yj78v5-claude-code-2.1.141"
       },
       "system": "x86_64-linux",
       "group": "claude-code",
@@ -138,28 +138,27 @@
     {
       "attr_path": "hello",
       "broken": false,
-      "derivation": "/nix/store/k32h9g0pzvvihwwdq4yj719lwf5np9p5-hello-2.12.3.drv",
+      "derivation": "/nix/store/q6gaf5dciiqahcc0zpk2snhvr0vy0gi4-hello-2.12.3.drv",
       "description": "Program that produces a familiar, friendly greeting",
       "install_id": "hello",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=549bd84d6279f9852cae6225e372cc67fb91a4c1",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=d233902339c02a9c334e7e593de68855ad26c4cb",
       "name": "hello-2.12.3",
       "pname": "hello",
-      "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
-      "rev_count": 992384,
-      "rev_date": "2026-05-05T04:14:16Z",
-      "scrape_date": "2026-05-06T08:07:30.689201Z",
+      "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+      "rev_count": 998534,
+      "rev_date": "2026-05-15T18:21:44Z",
+      "scrape_date": "2026-05-17T07:06:06.283687Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
       "version": "2.12.3",
       "outputs_to_install": [
-        "out",
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/yalw1pbrzmzk66phdkhslqh79pvbb67k-hello-2.12.3"
+        "out": "/nix/store/chnjf7vj55192vmdd2kfjjdlhzj7vill-hello-2.12.3"
       },
       "system": "aarch64-darwin",
       "group": "toplevel",
@@ -168,17 +167,17 @@
     {
       "attr_path": "hello",
       "broken": false,
-      "derivation": "/nix/store/i73jfdai20m66swnf9m05gv3696irahq-hello-2.12.3.drv",
+      "derivation": "/nix/store/54plif6rwaj5fjn8fp5z3b7ijhf56i7i-hello-2.12.3.drv",
       "description": "Program that produces a familiar, friendly greeting",
       "install_id": "hello",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=549bd84d6279f9852cae6225e372cc67fb91a4c1",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=d233902339c02a9c334e7e593de68855ad26c4cb",
       "name": "hello-2.12.3",
       "pname": "hello",
-      "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
-      "rev_count": 992384,
-      "rev_date": "2026-05-05T04:14:16Z",
-      "scrape_date": "2026-05-06T08:44:04.163469Z",
+      "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+      "rev_count": 998534,
+      "rev_date": "2026-05-15T18:21:44Z",
+      "scrape_date": "2026-05-17T07:33:48.240677Z",
       "stabilities": [
         "unstable"
       ],
@@ -188,7 +187,7 @@
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/vhakcknba2gk7s6zyhp6nf03f1gywq6w-hello-2.12.3"
+        "out": "/nix/store/40y2xfi1b79fri7qbzmwar47dqzlaw4w-hello-2.12.3"
       },
       "system": "aarch64-linux",
       "group": "toplevel",
@@ -197,17 +196,17 @@
     {
       "attr_path": "hello",
       "broken": false,
-      "derivation": "/nix/store/s1iryn4436aaqmrws03wi8k1vjxzdzgn-hello-2.12.3.drv",
+      "derivation": "/nix/store/a0c8q7chgdbmvvmv5235l9m52ng2m8n1-hello-2.12.3.drv",
       "description": "Program that produces a familiar, friendly greeting",
       "install_id": "hello",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=549bd84d6279f9852cae6225e372cc67fb91a4c1",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=d233902339c02a9c334e7e593de68855ad26c4cb",
       "name": "hello-2.12.3",
       "pname": "hello",
-      "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
-      "rev_count": 992384,
-      "rev_date": "2026-05-05T04:14:16Z",
-      "scrape_date": "2026-05-06T09:16:24.704447Z",
+      "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+      "rev_count": 998534,
+      "rev_date": "2026-05-15T18:21:44Z",
+      "scrape_date": "2026-05-17T08:01:33.284757Z",
       "stabilities": [
         "unstable"
       ],
@@ -217,7 +216,7 @@
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/9h3yphccdrbx0d9zhbjqprx8iysif0hg-hello-2.12.3"
+        "out": "/nix/store/bcx0ifzpgkh0ajmavry4whn1niq8gccv-hello-2.12.3"
       },
       "system": "x86_64-darwin",
       "group": "toplevel",
@@ -226,17 +225,17 @@
     {
       "attr_path": "hello",
       "broken": false,
-      "derivation": "/nix/store/rd86bi6mw84brmj6yxdf4ihd1x7qhri6-hello-2.12.3.drv",
+      "derivation": "/nix/store/kzzvpz5kzb946l809vb9w522yvcf5x5f-hello-2.12.3.drv",
       "description": "Program that produces a familiar, friendly greeting",
       "install_id": "hello",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=549bd84d6279f9852cae6225e372cc67fb91a4c1",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=d233902339c02a9c334e7e593de68855ad26c4cb",
       "name": "hello-2.12.3",
       "pname": "hello",
-      "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
-      "rev_count": 992384,
-      "rev_date": "2026-05-05T04:14:16Z",
-      "scrape_date": "2026-05-06T09:52:43.064340Z",
+      "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+      "rev_count": 998534,
+      "rev_date": "2026-05-15T18:21:44Z",
+      "scrape_date": "2026-05-17T08:32:29.880464Z",
       "stabilities": [
         "unstable"
       ],
@@ -246,7 +245,7 @@
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/3pcn0admdqrrd0k405y9hyad4579wgb3-hello-2.12.3"
+        "out": "/nix/store/a58bx0sw2r7fhk4qyg7wvjdd81zw561h-hello-2.12.3"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
@@ -259,13 +258,13 @@
       "description": "Most popular clone of the VI editor",
       "install_id": "vim",
       "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=549bd84d6279f9852cae6225e372cc67fb91a4c1",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=d233902339c02a9c334e7e593de68855ad26c4cb",
       "name": "vim-9.2.0340",
       "pname": "vim",
-      "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
-      "rev_count": 992384,
-      "rev_date": "2026-05-05T04:14:16Z",
-      "scrape_date": "2026-05-06T08:09:49.874190Z",
+      "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+      "rev_count": 998534,
+      "rev_date": "2026-05-15T18:21:44Z",
+      "scrape_date": "2026-05-17T07:08:22.938152Z",
       "stabilities": [
         "unstable"
       ],
@@ -290,13 +289,13 @@
       "description": "Most popular clone of the VI editor",
       "install_id": "vim",
       "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=549bd84d6279f9852cae6225e372cc67fb91a4c1",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=d233902339c02a9c334e7e593de68855ad26c4cb",
       "name": "vim-9.2.0340",
       "pname": "vim",
-      "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
-      "rev_count": 992384,
-      "rev_date": "2026-05-05T04:14:16Z",
-      "scrape_date": "2026-05-06T08:47:10.343914Z",
+      "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+      "rev_count": 998534,
+      "rev_date": "2026-05-15T18:21:44Z",
+      "scrape_date": "2026-05-17T07:36:50.227236Z",
       "stabilities": [
         "unstable"
       ],
@@ -321,13 +320,13 @@
       "description": "Most popular clone of the VI editor",
       "install_id": "vim",
       "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=549bd84d6279f9852cae6225e372cc67fb91a4c1",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=d233902339c02a9c334e7e593de68855ad26c4cb",
       "name": "vim-9.2.0340",
       "pname": "vim",
-      "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
-      "rev_count": 992384,
-      "rev_date": "2026-05-05T04:14:16Z",
-      "scrape_date": "2026-05-06T09:18:42.723527Z",
+      "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+      "rev_count": 998534,
+      "rev_date": "2026-05-15T18:21:44Z",
+      "scrape_date": "2026-05-17T08:03:59.093923Z",
       "stabilities": [
         "unstable"
       ],
@@ -352,13 +351,13 @@
       "description": "Most popular clone of the VI editor",
       "install_id": "vim",
       "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=549bd84d6279f9852cae6225e372cc67fb91a4c1",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=d233902339c02a9c334e7e593de68855ad26c4cb",
       "name": "vim-9.2.0340",
       "pname": "vim",
-      "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
-      "rev_count": 992384,
-      "rev_date": "2026-05-05T04:14:16Z",
-      "scrape_date": "2026-05-06T09:55:48.221549Z",
+      "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+      "rev_count": 998534,
+      "rev_date": "2026-05-15T18:21:44Z",
+      "scrape_date": "2026-05-17T08:35:48.406526Z",
       "stabilities": [
         "unstable"
       ],

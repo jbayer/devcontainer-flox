@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     sudo \
     xz-utils \
     openssh-client \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. Run the official Flox installer script

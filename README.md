@@ -149,7 +149,7 @@ This is detected by checking for `.flox/env/manifest.toml` in the working direct
 To rebuild the image after making changes to the Dockerfile:
 
 ```bash
-docker build -t jbayer/devcontainer-flox:1.12.0 -t jbayer/devcontainer-flox:latest -t  .
+docker buildx build -t jbayer/devcontainer-flox:1.12.0 -t jbayer/devcontainer-flox:latest .
 docker push  --all-tags jbayer/devcontainer-flox
 ```
 
