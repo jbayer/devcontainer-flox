@@ -177,4 +177,5 @@ This repository is a starting point. You can modify it to fit your needs:
 - **Dockerfile** — Add system packages, change the base image, or pin a specific Flox version.
 - **`devcontainer.json`** — Add VS Code extensions, change the `postCreateCommand` to run project setup (e.g., `flox install` from a checked-in `manifest.toml`), or add additional mounts and environment variables.
 - **Flox environment** — Run `flox init` and `flox install <package>` inside the container to build up your environment, then commit the `.flox/` directory so teammates get the same dependencies automatically.
+- Easily add a devcontainer to new projects: `ln -s ~/workspaces/devcontainers/.devcontainer ~/workspaces/some-project/.devcontainer`
 

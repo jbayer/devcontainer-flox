@@ -22,27 +22,27 @@
     {
       "attr_path": "claude-code",
       "broken": false,
-      "derivation": "/nix/store/8l2hay17dh0f2cnqdiww3h716nl078n9-claude-code-2.1.141.drv",
+      "derivation": "/nix/store/bgq7ad4gymyanlpfjl90qpwn16x23s0v-claude-code-2.1.148.drv",
       "description": "Agentic coding tool from Anthropic",
       "install_id": "claude-code",
       "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
-      "name": "claude-code-2.1.141",
+      "locked_url": "https://github.com/flox/floxenvs?rev=0dc5221ed1aecf5199e7a50f8b3950740f2299c2",
+      "name": "claude-code-2.1.148",
       "pname": "claude-code",
-      "rev": "bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
-      "rev_count": 3327,
-      "rev_date": "2026-05-14T10:08:55Z",
-      "scrape_date": "2026-05-18T16:20:37.854934381Z",
+      "rev": "0dc5221ed1aecf5199e7a50f8b3950740f2299c2",
+      "rev_count": 3845,
+      "rev_date": "2026-05-22T07:25:58Z",
+      "scrape_date": "2026-05-23T00:29:14.022653462Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": true,
-      "version": "2.1.141",
+      "version": "2.1.148",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/gckpbs4vk8wyfgarr8w6wz53ykhxzbw1-claude-code-2.1.141"
+        "out": "/nix/store/2f3fw5724dxlw6hjd28pa836h0m191q5-claude-code-2.1.148"
       },
       "system": "aarch64-darwin",
       "group": "claude-code",
@@ -51,27 +51,27 @@
     {
       "attr_path": "claude-code",
       "broken": false,
-      "derivation": "/nix/store/lg349nwky5rgl7gnmqyxzwagcwdp9x5h-claude-code-2.1.141.drv",
+      "derivation": "/nix/store/nk1lrzmlclb5b2kvbimqw4y3zyzia3yx-claude-code-2.1.148.drv",
       "description": "Agentic coding tool from Anthropic",
       "install_id": "claude-code",
       "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
-      "name": "claude-code-2.1.141",
+      "locked_url": "https://github.com/flox/floxenvs?rev=0dc5221ed1aecf5199e7a50f8b3950740f2299c2",
+      "name": "claude-code-2.1.148",
       "pname": "claude-code",
-      "rev": "bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
-      "rev_count": 3327,
-      "rev_date": "2026-05-14T10:08:55Z",
-      "scrape_date": "2026-05-18T16:20:37.854940797Z",
+      "rev": "0dc5221ed1aecf5199e7a50f8b3950740f2299c2",
+      "rev_count": 3845,
+      "rev_date": "2026-05-22T07:25:58Z",
+      "scrape_date": "2026-05-23T00:29:14.022661504Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": true,
-      "version": "2.1.141",
+      "version": "2.1.148",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/gdzh2ynafj30iz3gvmplcrch92sgarm0-claude-code-2.1.141"
+        "out": "/nix/store/6bikgbzkhyzwip7h46hc8dlkda4qn0pq-claude-code-2.1.148"
       },
       "system": "aarch64-linux",
       "group": "claude-code",
@@ -80,27 +80,27 @@
     {
       "attr_path": "claude-code",
       "broken": false,
-      "derivation": "/nix/store/ngx8rhlnfnxlfdjqwhawi5pri4ykd83f-claude-code-2.1.141.drv",
+      "derivation": "/nix/store/zhk32jvgiq8209d7pbi931l2xdfllqz7-claude-code-2.1.148.drv",
       "description": "Agentic coding tool from Anthropic",
       "install_id": "claude-code",
       "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
-      "name": "claude-code-2.1.141",
+      "locked_url": "https://github.com/flox/floxenvs?rev=0dc5221ed1aecf5199e7a50f8b3950740f2299c2",
+      "name": "claude-code-2.1.148",
       "pname": "claude-code",
-      "rev": "bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
-      "rev_count": 3327,
-      "rev_date": "2026-05-14T10:08:55Z",
-      "scrape_date": "2026-05-18T16:20:37.854942006Z",
+      "rev": "0dc5221ed1aecf5199e7a50f8b3950740f2299c2",
+      "rev_count": 3845,
+      "rev_date": "2026-05-22T07:25:58Z",
+      "scrape_date": "2026-05-23T00:29:14.022662837Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": true,
-      "version": "2.1.141",
+      "version": "2.1.148",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/ijkl9clcsgp9fvzg4qjb5xnv0v8gmkny-claude-code-2.1.141"
+        "out": "/nix/store/hv2rqkxc2z3rpwhsyl47lc8rbjnzyc8i-claude-code-2.1.148"
       },
       "system": "x86_64-darwin",
       "group": "claude-code",
@@ -109,27 +109,27 @@
     {
       "attr_path": "claude-code",
       "broken": false,
-      "derivation": "/nix/store/f5p3akgnffldplwk394l5b27r499syxb-claude-code-2.1.141.drv",
+      "derivation": "/nix/store/2q8cvs21rvbykz7sxl2ribq1l5ly7j8r-claude-code-2.1.148.drv",
       "description": "Agentic coding tool from Anthropic",
       "install_id": "claude-code",
       "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
-      "name": "claude-code-2.1.141",
+      "locked_url": "https://github.com/flox/floxenvs?rev=0dc5221ed1aecf5199e7a50f8b3950740f2299c2",
+      "name": "claude-code-2.1.148",
       "pname": "claude-code",
-      "rev": "bd93f614381fd4ea0eaf18f5c95b4efd626427a3",
-      "rev_count": 3327,
-      "rev_date": "2026-05-14T10:08:55Z",
-      "scrape_date": "2026-05-18T16:20:37.854943131Z",
+      "rev": "0dc5221ed1aecf5199e7a50f8b3950740f2299c2",
+      "rev_count": 3845,
+      "rev_date": "2026-05-22T07:25:58Z",
+      "scrape_date": "2026-05-23T00:29:14.022663754Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": true,
-      "version": "2.1.141",
+      "version": "2.1.148",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/n69zkbh80r7d9c7lw5wny45qg8yj78v5-claude-code-2.1.141"
+        "out": "/nix/store/yx26jyjxf9gdmcv864h9fl9lz3h1q414-claude-code-2.1.148"
       },
       "system": "x86_64-linux",
       "group": "claude-code",
