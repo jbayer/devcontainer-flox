@@ -22,18 +22,18 @@ RUN curl https://downloads.flox.dev/by-env/stable/deb/flox-1.12.1.aarch64-linux.
     rm flox.aarch64-linux.deb
 
 # 3. Setup a non-root user (Flox requires this for certain Nix features)
-RUN useradd -ms /bin/bash floxuser && \
-    echo "floxuser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
-    chown -R floxuser:floxuser /nix
+RUN useradd -ms /bin/bash flox && \
+    echo "flox ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+    chown -R flox:flox /nix
 
 # 4. Bypass nix-daemon (systemd is not PID 1 in containers)
 ENV NIX_REMOTE=auto
 
-USER floxuser
-WORKDIR /home/floxuser
+USER flox
+WORKDIR /home/flox
 
 # 5. Auto-activate Flox environment if present in the working directory
-RUN echo 'if [ -f .flox/env/manifest.toml ]; then eval "$(flox activate)"; fi' >> /home/floxuser/.bashrc
+RUN echo 'if [ -f .flox/env/manifest.toml ]; then eval "$(flox activate)"; fi' >> /home/flox/.bashrc
 
 # Verify the installation
 RUN flox --version
