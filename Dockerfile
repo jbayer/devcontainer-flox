@@ -33,7 +33,7 @@ USER flox
 WORKDIR /home/flox
 
 # 5. Auto-activate FloxHub default environment, then layer local environment if present
-RUN echo 'eval "$(flox activate -r jbayer/default)"' >> /home/flox/.bashrc && \
+RUN echo 'eval "$(flox activate -t -r jbayer/default)"' >> /home/flox/.bashrc && \
     echo 'if [ -f .flox/env/manifest.toml ]; then eval "$(flox activate)"; fi' >> /home/flox/.bashrc
 
 # Verify the installation
