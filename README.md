@@ -1,6 +1,6 @@
 # Dev Container for Flox
 
-**Goal:** frictionless local development using Linux container isolation for untrusted scenarios including package manager commands and using AI agents like Claude Code.
+ **Goal:** frictionless local development using Linux container isolation for untrusted scenarios including package manager commands and using AI agents like Claude Code.
 
 This project includes a Dockerfile for an Ubuntu 26.04 container image to be used as a [Dev Container](https://containers.dev/) base image with [Flox](https://flox.dev) pre-installed. The flox environment in this repository includes Claude Code to demonstrate using AI agents inside the container.
 
