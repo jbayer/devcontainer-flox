@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # 2. Run the official Flox installer script
 # This script detects your CPU architecture and installs the correct .deb automatically
-RUN curl https://downloads.flox.dev/by-env/stable/deb/flox-1.12.1.aarch64-linux.deb \
+RUN curl https://downloads.flox.dev/by-env/stable/deb/flox-1.12.2.aarch64-linux.deb \
     -o flox.aarch64-linux.deb && \
     dpkg -i flox.aarch64-linux.deb && \
     rm flox.aarch64-linux.deb
