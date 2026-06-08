@@ -22,6 +22,6 @@
     "SSH_AUTH_SOCK": "/run/host-services/ssh-auth.sock",
     "FLOX_AUTOACTIVATE_DIR": "${containerWorkspaceFolder}"
   },
-  "postStartCommand": "sudo /usr/local/bin/start-nix-daemon.sh",
+  "postStartCommand": "sudo /usr/local/bin/fix-home-perms.sh && sudo /usr/local/bin/start-nix-daemon.sh",
   "remoteUser": "flox"
 }

@@ -41,10 +41,19 @@ RUN groupadd -g 30000 nixbld && \
     chown -R root:nixbld /nix/store /nix/var/nix && \
     chmod 1775 /nix/store
 
-# 4. Setup a non-root user. In multi-user mode this user is just a daemon
+# 4. Setup the non-root user. In multi-user mode this user is just a daemon
 #    *client*; it does NOT own /nix. NOPASSWD sudo lets the devcontainer
-#    postStartCommand start the root daemon.
-RUN useradd -ms /bin/bash flox && \
+#    postStartCommand start the root daemon and heal home-dir ownership.
+#
+#    Pin flox to a fixed uid/gid (1000) so it never drifts: the home directory
+#    is a persistent volume, and if flox's uid changes between image versions
+#    (e.g. because the nixbld pool above shifts the next auto-assigned uid) the
+#    user loses access to its own home. We claim 1000 (the conventional dev
+#    uid, friendly to host bind mounts) by removing the base image's default
+#    `ubuntu` user that otherwise holds it.
+RUN userdel -r ubuntu 2>/dev/null || true; groupdel ubuntu 2>/dev/null || true; \
+    groupadd -g 1000 flox && \
+    useradd -m -u 1000 -g 1000 -s /bin/bash flox && \
     echo "flox ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # 5. Multi-user Nix instead of the daemon-less single-user workaround.
@@ -60,7 +69,9 @@ RUN printf '\ntrusted-users = root flox\n' >> /etc/nix/nix.conf
 # 6. Install the daemon-start and entrypoint scripts.
 COPY start-nix-daemon.sh /usr/local/bin/start-nix-daemon.sh
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/start-nix-daemon.sh /usr/local/bin/entrypoint.sh
+COPY fix-home-perms.sh /usr/local/bin/fix-home-perms.sh
+RUN chmod +x /usr/local/bin/start-nix-daemon.sh /usr/local/bin/entrypoint.sh \
+      /usr/local/bin/fix-home-perms.sh
 
 WORKDIR /home/flox
 
