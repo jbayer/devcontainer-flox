@@ -142,7 +142,7 @@ The Flox `.deb` lays down a root-owned `/nix` and a multi-user `nix.conf`, but i
 The `devcontainer.json` includes several settings for a smooth experience:
 
 - **Named Docker volume for `/nix`** — A persistent volume (`nix-store`) is mounted at `/nix` so that packages installed via `flox install` survive container rebuilds. Without this, every rebuild would require re-downloading all Nix store paths.
-- **Named Docker volume for `/home/flox`** — The entire home directory is persisted so that shell history, Claude Code authentication, and other user-level configuration survive container rebuilds.
+- **Named Docker volume for `/home/flox`** — The entire home directory is persisted so that shell history, Claude Code authentication, and other user-level configuration survive container rebuilds. Because the home dir is a persistent volume, the `flox` user is pinned to a fixed **uid/gid 1000** (claimed by removing the base image's default `ubuntu` user) so it never drifts between image versions and lose access to its own home. As a safety net, the `postStartCommand` runs `fix-home-perms.sh`, which re-`chown`s `/home/flox` to `flox` if a volume created by an older image has stale ownership.
 - **SSH key forwarding** — Your host `~/.ssh` directory is bind-mounted (read-only) into the container so that Git commit signing and SSH-based remotes work transparently.
 - **Git feature** — The Dev Container `git` feature is included to manage the Git version independently of the base image.
 - **Non-root user** — The container runs as `flox` rather than root, following security best practices.
@@ -157,6 +157,7 @@ How it works:
 - `devcontainer.json` sets `FLOX_AUTOACTIVATE_DIR=${containerWorkspaceFolder}`, so activation targets the **project workspace** specifically. For plain `docker run` (no devcontainer), it falls back to the current directory.
 - It activates only if `<dir>/.flox/env/manifest.toml` exists; otherwise the shell starts normally.
 - It's guarded by `$FLOX_ENV`, so it activates once per shell and won't recurse into sub-processes.
+- Activation is deferred to just before the first prompt (via `PROMPT_COMMAND`) so it runs *after* `~/.bashrc` finalizes `PS1`. Otherwise flox's `flox [env]` prompt indicator — which it applies by setting `PS1` during activation — would be overwritten by `~/.bashrc` (bash sources it after `/etc/bash.bashrc`).
 
 The snippet lives in `/etc` rather than `~/.bashrc` on purpose: the dev container mounts a persistent volume over `/home/flox`, which would mask anything baked into the home directory after the first build (the same reason the Nix store setup lives outside the home dir).
 
