@@ -1,6 +1,6 @@
 {
   "name": "Dev Container Example",
-  "image": "jbayer/devcontainer-flox:1.12.2@sha256:6013052d530f55b3c4b2ae0599c9841977f41fae2fa170cf6326d7822082ee6b",
+  "image": "jbayer/devcontainer-flox:1.12.2@sha256:840195fcf4bf36d463c64232fa08c0daf13532d0d213dd07635c5453220b4fc6",
   "features": {
       },
   "customizations": {
