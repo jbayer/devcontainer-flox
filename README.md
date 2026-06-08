@@ -117,16 +117,25 @@ claude --dangerously-skip-permissions
 
 ## What's included
 
-- **Dockerfile** — Builds an Ubuntu 26.04 image with Flox installed via the official `.deb` package. Includes workarounds for running Nix inside containers (see below).
+- **`docker/`** — Self-contained image build directory: the `Dockerfile` (builds an Ubuntu 26.04 image with Flox installed via the official `.deb`, with the multi-user Nix workarounds below) plus the `start-nix-daemon.sh` and `entrypoint.sh` scripts it bakes in.
 - **`.devcontainer/devcontainer.json`** — Dev Container configuration tuned for Flox and Nix compatibility.
 - **`.flox`** - Example flox environment with several packages.
 
 ## Nix and container workarounds
 
-Flox uses Nix under the hood, and Nix normally relies on a daemon (`nix-daemon`) managed by systemd. Containers don't run systemd as PID 1, so the daemon isn't available. This repository applies two workarounds to the Dockerfile which produces the base image for the devcontainer:
+Flox uses Nix under the hood, and Nix normally relies on a daemon (`nix-daemon`) managed by systemd. Containers don't run systemd as PID 1, so the packaged `nix-daemon.service` never starts.
 
-- **`NIX_REMOTE=auto`** — Set in the Dockerfile so Nix operates in single-user mode, bypassing the daemon entirely.
-- **`chown -R flox:flox /nix`** — Gives the non-root container user direct write access to the Nix store, which is required in single-user mode.
+This image runs Nix in **multi-user mode** (the daemon model), not single-user mode. In multi-user mode `nix-daemon` runs as **root**, owns the (root-owned) `/nix/store`, and drops privileges to the unprivileged `nixbld*` build users for each build. The `flox` user is only a *client* that talks to the daemon over its socket. This is the safer model inside a container, where users can switch identities: store integrity is enforced by the root daemon over the socket rather than by filesystem ownership, so an unprivileged user can't tamper with the store.
+
+The Flox `.deb` lays down a root-owned `/nix` and a multi-user `nix.conf`, but inside a container **build** it does *not* create the `nixbld` build users (it leaves `build-users-group` empty, which would make the root daemon run builds as root). The Dockerfile therefore creates the standard `nixbld1..32` pool and sets `build-users-group = nixbld`. The remaining piece is *starting the daemon without systemd*, which this repo handles as follows:
+
+- **`docker/start-nix-daemon.sh`** — Reproduces the systemd unit's `ExecStart=/usr/sbin/nix-daemon --daemon`. It must run as root, is idempotent (no-op if a daemon is already running), clears a stale socket left on the persistent `/nix` volume, and waits for the socket before returning. It launches the daemon with `env -u NIX_REMOTE` so the daemon accesses the local store directly — otherwise it inherits the image-wide `NIX_REMOTE=daemon` and tries to proxy to *itself* (`cannot open connection to remote store 'daemon'`).
+- **`postStartCommand: "sudo /usr/local/bin/start-nix-daemon.sh"`** — In the dev container, the daemon is started this way on every container start (the `flox` user has `NOPASSWD` sudo). Dev Containers manage their own keep-alive process and override the image `ENTRYPOINT`, so a lifecycle hook is the reliable place to start the daemon.
+- **`docker/entrypoint.sh`** — Covers plain `docker run`: starts the root daemon, then drops to the `flox` user.
+- **`NIX_REMOTE=daemon`** — Set in the Dockerfile so clients talk to the daemon over its socket.
+- **`NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt`** — Gives the daemon a CA bundle so it can fetch from substituters (caches).
+
+> **Migrating from a single-user setup:** the `/nix` volume was renamed to `devcontainer-nix-store-multiuser` so a fresh, correctly-owned (root) store is seeded from the image. An old single-user `/nix` volume is `flox`-owned and incompatible with the daemon. Remove it with `docker volume rm devcontainer-nix-store` if it lingers.
 
 ## Dev Container configuration details
 
@@ -149,15 +158,17 @@ This is detected by checking for `.flox/env/manifest.toml` in the working direct
 To rebuild the image after making changes to the Dockerfile:
 
 ```bash
-docker buildx build -t jbayer/devcontainer-flox:1.12.2 -t jbayer/devcontainer-flox:latest .
+docker buildx build -t jbayer/devcontainer-flox:1.12.2 -t jbayer/devcontainer-flox:latest docker/
 docker push  --all-tags jbayer/devcontainer-flox
 ```
+
+The build context is the `docker/` directory, which contains everything the image needs and nothing else.
 
 After pushing, rebuild the dev container in VS Code via **"Dev Containers: Rebuild Container"** from the command palette to pick up the new image.
 
 > **Note:** The persistent volumes for `/nix` and `/home/flox` will retain their existing contents across image updates. If you need a clean slate (e.g., after a Flox version upgrade in the Dockerfile), delete the volumes manually:
 > ```bash
-> docker volume rm nix-store flox-home
+> docker volume rm devcontainer-nix-store-multiuser <basename>-flox-home
 > ```
 
 ## Using the pre-built image

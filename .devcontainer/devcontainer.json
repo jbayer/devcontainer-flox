@@ -15,13 +15,12 @@
     "source=/run/host-services/ssh-auth.sock,target=/run/host-services/ssh-auth.sock,type=bind",
     "source=${localEnv:HOME}/.gitconfig,target=/home/flox/.gitconfig,type=bind,readonly",
     "source=${localEnv:HOME}/.ssh,target=/home/flox/.ssh,type=bind,readonly",
-    "source=devcontainer-nix-store,target=/nix,type=volume",
+    "source=devcontainer-nix-store-multiuser,target=/nix,type=volume",
     "source=${localWorkspaceFolderBasename}-flox-home,target=/home/flox,type=volume"
   ],
   "remoteEnv": {
     "SSH_AUTH_SOCK": "/run/host-services/ssh-auth.sock"
   },
-  "runArgs": ["--group-add", "root"],
-  "postStartCommand": "",
+  "postStartCommand": "sudo /usr/local/bin/start-nix-daemon.sh",
   "remoteUser": "flox"
 }
