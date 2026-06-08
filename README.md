@@ -149,9 +149,18 @@ The `devcontainer.json` includes several settings for a smooth experience:
 
 ## Automatic Flox activation
 
-The Dockerfile adds a line to `.bashrc` that automatically runs `flox activate` when a Flox environment exists in the current working directory. Any interactive bash shell — whether from VS Code's integrated terminal, `devcontainer exec`, or `docker exec` — will activate the environment without any manual steps.
+When you open the dev container, any interactive shell automatically runs `flox activate` against the project's Flox environment — so the env's packages and hooks are available immediately, with no manual step. This works in the VS Code integrated terminal, `devcontainer exec`, and `docker exec -it`.
 
-This is detected by checking for `.flox/env/manifest.toml` in the working directory. If no Flox environment is present, the shell starts normally.
+How it works:
+
+- The image ships `/etc/profile.d/flox-autoactivate.sh`, sourced from both `/etc/bash.bashrc` (interactive non-login shells) and `/etc/profile.d` (login shells).
+- `devcontainer.json` sets `FLOX_AUTOACTIVATE_DIR=${containerWorkspaceFolder}`, so activation targets the **project workspace** specifically. For plain `docker run` (no devcontainer), it falls back to the current directory.
+- It activates only if `<dir>/.flox/env/manifest.toml` exists; otherwise the shell starts normally.
+- It's guarded by `$FLOX_ENV`, so it activates once per shell and won't recurse into sub-processes.
+
+The snippet lives in `/etc` rather than `~/.bashrc` on purpose: the dev container mounts a persistent volume over `/home/flox`, which would mask anything baked into the home directory after the first build (the same reason the Nix store setup lives outside the home dir).
+
+> First activation in a fresh environment may pull or build the env's packages via the daemon, so the very first shell can take a moment; subsequent shells are instant.
 
 ## Building the Docker image
 

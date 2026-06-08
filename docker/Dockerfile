@@ -64,8 +64,16 @@ RUN chmod +x /usr/local/bin/start-nix-daemon.sh /usr/local/bin/entrypoint.sh
 
 WORKDIR /home/flox
 
-# 7. Activate flox environment if present
-# RUN echo 'if [ -f .flox/env/manifest.toml ]; then eval "$(flox activate)"; fi' >> /home/flox/.bashrc
+# 7. Auto-activate the project's Flox environment in interactive shells.
+#    Installed in /etc (not ~/.bashrc) because the devcontainer mounts a
+#    persistent volume over /home/flox that would mask the home directory.
+#    Sourced from both /etc/bash.bashrc (interactive non-login shells, e.g.
+#    the VS Code terminal and `docker exec -it`) and /etc/profile.d (login
+#    shells). The devcontainer points it at the workspace via
+#    FLOX_AUTOACTIVATE_DIR; otherwise it falls back to $PWD.
+COPY flox-autoactivate.sh /etc/profile.d/flox-autoactivate.sh
+RUN printf '\n# Flox project auto-activation\n. /etc/profile.d/flox-autoactivate.sh\n' \
+      >> /etc/bash.bashrc
 
 # Verify the installation (runs as root at build time; no daemon needed for --version)
 RUN flox --version
