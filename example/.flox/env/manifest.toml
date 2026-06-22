@@ -1,0 +1,4 @@
+schema-version = "1.13.0"
+
+[install]
+hello.pkg-path = "hello"

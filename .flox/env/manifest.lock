@@ -3,113 +3,50 @@
   "manifest": {
     "schema-version": "1.11.0",
     "install": {
-      "claude-code": {
-        "pkg-path": "flox/claude-code",
-        "pkg-group": "claude-code"
-      },
-      "hello": {
-        "pkg-path": "hello"
-      },
-      "vim": {
-        "pkg-path": "vim"
+      "devcontainer": {
+        "pkg-path": "devcontainer"
       }
     },
-    "hook": {},
-    "profile": {},
+    "hook": {
+      "on-activate": ""
+    },
+    "profile": {
+      "common": "",
+      "zsh": "if [[ \"$(uname -s)\" == \"Darwin\" ]]; then\n  chpwd() {\n    if [ -d \".devcontainer\" ] && [ -z \"$INSIDE_DEVCONTAINER\" ]; then\n     echo \"🐳 Starting devcontainer and connecting...\"\n     devcontainer up --workspace-folder . && \\\n     INSIDE_DEVCONTAINER=1 devcontainer exec --workspace-folder . bash\n   fi\n  }\nfi\n"
+    },
     "options": {
       "systems": [
         "aarch64-darwin"
-      ]
+      ],
+      "cuda-detection": false
     }
   },
   "packages": [
     {
-      "attr_path": "claude-code",
+      "attr_path": "devcontainer",
       "broken": false,
-      "derivation": "/nix/store/zp1p4p9z4k0fc1a4nk6ji3w3m3rzwzq3-claude-code-2.1.167.drv",
-      "description": "Agentic coding tool from Anthropic",
-      "install_id": "claude-code",
-      "license": "Unfree",
-      "locked_url": "https://github.com/flox/floxenvs?rev=e9778d06d4ca4bec6582507e5f1a03bc38507715",
-      "name": "claude-code-2.1.167",
-      "pname": "claude-code",
-      "rev": "e9778d06d4ca4bec6582507e5f1a03bc38507715",
-      "rev_count": 6463,
-      "rev_date": "2026-06-06T07:34:06Z",
-      "scrape_date": "2026-06-08T02:14:56.613365Z",
-      "stabilities": [
-        "staging",
-        "unstable"
-      ],
-      "unfree": true,
-      "version": "2.1.167",
-      "outputs_to_install": [
-        "out"
-      ],
-      "outputs": {
-        "out": "/nix/store/jabyk07ihbzs22dq58hyvdxvffspykcf-claude-code-2.1.167"
-      },
-      "system": "aarch64-darwin",
-      "group": "claude-code",
-      "priority": 5
-    },
-    {
-      "attr_path": "hello",
-      "broken": false,
-      "derivation": "/nix/store/r77jznkw60xvqjzs3jvd1dn54pxcqs68-hello-2.12.3.drv",
-      "description": "Program that produces a familiar, friendly greeting",
-      "install_id": "hello",
-      "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
-      "name": "hello-2.12.3",
-      "pname": "hello",
-      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
-      "rev_count": 1008282,
-      "rev_date": "2026-05-31T16:09:29Z",
-      "scrape_date": "2026-06-02T08:55:55.826913Z",
+      "derivation": "/nix/store/d21i15c6h9q8z3yhldjabv4732zgx6d7-devcontainer-0.87.0.drv",
+      "description": "Dev container CLI, run and manage your dev environments via a devcontainer.json",
+      "install_id": "devcontainer",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=567a49d1913ce81ac6e9582e3553dd90a955875f",
+      "name": "devcontainer-0.87.0",
+      "pname": "devcontainer",
+      "rev": "567a49d1913ce81ac6e9582e3553dd90a955875f",
+      "rev_count": 1017464,
+      "rev_date": "2026-06-16T02:33:49Z",
+      "scrape_date": "2026-06-17T03:13:14.165116Z",
       "stabilities": [
         "staging",
         "unstable"
       ],
       "unfree": false,
-      "version": "2.12.3",
+      "version": "0.87.0",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/0wgbcxqvngwz6irw1b5sscw8j7g3zi91-hello-2.12.3"
-      },
-      "system": "aarch64-darwin",
-      "group": "toplevel",
-      "priority": 5
-    },
-    {
-      "attr_path": "vim",
-      "broken": false,
-      "derivation": "/nix/store/1q5qn5ff82nhrk1p0wnrf7dgir17xbhd-vim-9.2.0389.drv",
-      "description": "Most popular clone of the VI editor",
-      "install_id": "vim",
-      "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
-      "name": "vim-9.2.0389",
-      "pname": "vim",
-      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
-      "rev_count": 1008282,
-      "rev_date": "2026-05-31T16:09:29Z",
-      "scrape_date": "2026-06-02T08:58:12.859933Z",
-      "stabilities": [
-        "staging",
-        "unstable"
-      ],
-      "unfree": false,
-      "version": "9.2.0389",
-      "outputs_to_install": [
-        "out",
-        "xxd"
-      ],
-      "outputs": {
-        "out": "/nix/store/6vbkykg92w603c0sw3mkk7p7mfaawbns-vim-9.2.0389",
-        "xxd": "/nix/store/9iv8rc5y9i1xb59630q4vd9091imvrm3-vim-9.2.0389-xxd"
+        "out": "/nix/store/3wgn5xirg8fcfc28xriwqha8nxn560qc-devcontainer-0.87.0"
       },
       "system": "aarch64-darwin",
       "group": "toplevel",
