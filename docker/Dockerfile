@@ -86,6 +86,17 @@ COPY flox-autoactivate.sh /etc/profile.d/flox-autoactivate.sh
 RUN printf '\n# Flox project auto-activation\n. /etc/profile.d/flox-autoactivate.sh\n' \
       >> /etc/bash.bashrc
 
+# 7b. Pre-trust the default base environment (jbayer/default) that step 7 layers
+#     into every shell. flox refuses to activate a *remote* environment until it
+#     is trusted, because activation hooks run arbitrary code; on a host that
+#     prompt is interactive. In a headless container (acdev `container exec`,
+#     devcontainer terminal) there is no one to answer it, so the first
+#     activation would fail. Set the trust system-wide in /etc/flox.toml (the
+#     flox .deb's system config) rather than the flox user's ~/.config: the
+#     system file applies to every user and is not masked by the persistent
+#     /home/flox volume the devcontainer mounts over the home directory.
+RUN printf '\n[trusted_environments]\n"jbayer/default" = "trust"\n' >> /etc/flox.toml
+
 # Verify the installation (runs as root at build time; no daemon needed for --version)
 RUN flox --version
 
