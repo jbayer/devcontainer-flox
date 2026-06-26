@@ -34,8 +34,8 @@ on-activate = '''
 [profile]
 common = '''
 # symlink the shared .devcontainer into the current directory
-alias devc='ln -s ~/workspaces/devcontainers/.devcontainer .devcontainer'
-alias devc-cp='cp -R ~/workspaces/devcontainers/.devcontainer .'
+alias devc='ln -s ~/workspaces/devcontainers/example/.devcontainer .devcontainer'
+alias devc-cp='cp -R ~/workspaces/devcontainers/example/.devcontainer .'
 '''
 
 ## Shell-specific customizations such as setting aliases go here:

@@ -11,7 +11,7 @@
       "on-activate": ""
     },
     "profile": {
-      "common": "# symlink the shared .devcontainer into the current directory\nalias devc='ln -s ~/workspaces/devcontainers/.devcontainer .devcontainer'\nalias devc-cp='cp -R ~/workspaces/devcontainers/.devcontainer .'\n",
+      "common": "# symlink the shared .devcontainer into the current directory\nalias devc='ln -s ~/workspaces/devcontainers/example/.devcontainer .devcontainer'\nalias devc-cp='cp -R ~/workspaces/devcontainers/example/.devcontainer .'\n",
       "zsh": "if [[ \"$(uname -s)\" == \"Darwin\" ]]; then\n  chpwd() {\n    if [ -d \".devcontainer\" ] && [ -z \"$INSIDE_DEVCONTAINER\" ]; then\n     echo \"🐳 Starting devcontainer and connecting...\"\n     devcontainer up --workspace-folder . && \\\n     INSIDE_DEVCONTAINER=1 devcontainer exec --workspace-folder . bash\n   fi\n  }\nfi\n"
     },
     "options": {
