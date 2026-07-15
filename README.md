@@ -168,7 +168,7 @@ The snippet lives in `/etc` rather than `~/.bashrc` on purpose: the dev containe
 To rebuild the image after making changes to the Dockerfile:
 
 ```bash
-docker buildx build -t jbayer/devcontainer-flox:1.13.0 -t jbayer/devcontainer-flox:latest docker/
+docker buildx build -t jbayer/devcontainer-flox:1.13.1 -t jbayer/devcontainer-flox:latest docker/
 docker push  --all-tags jbayer/devcontainer-flox
 ```
 

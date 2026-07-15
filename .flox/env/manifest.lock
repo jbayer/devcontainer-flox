@@ -25,19 +25,18 @@
     {
       "attr_path": "devcontainer",
       "broken": false,
-      "derivation": "/nix/store/d21i15c6h9q8z3yhldjabv4732zgx6d7-devcontainer-0.87.0.drv",
+      "derivation": "/nix/store/zafm91knmlb6k757rfshjdxykhs87p16-devcontainer-0.87.0.drv",
       "description": "Dev container CLI, run and manage your dev environments via a devcontainer.json",
       "install_id": "devcontainer",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=567a49d1913ce81ac6e9582e3553dd90a955875f",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0bb7ec54c8483066ec9d7720e780a5caa71f8612",
       "name": "devcontainer-0.87.0",
       "pname": "devcontainer",
-      "rev": "567a49d1913ce81ac6e9582e3553dd90a955875f",
-      "rev_count": 1017464,
-      "rev_date": "2026-06-16T02:33:49Z",
-      "scrape_date": "2026-06-17T03:13:14.165116Z",
+      "rev": "0bb7ec54c8483066ec9d7720e780a5caa71f8612",
+      "rev_count": 1031299,
+      "rev_date": "2026-07-08T14:55:02Z",
+      "scrape_date": "2026-07-11T03:19:04.323663Z",
       "stabilities": [
-        "staging",
         "unstable"
       ],
       "unfree": false,
@@ -46,7 +45,7 @@
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/3wgn5xirg8fcfc28xriwqha8nxn560qc-devcontainer-0.87.0"
+        "out": "/nix/store/jgijjd3chw8sh0clxcvbwc8fw4w3gvk2-devcontainer-0.87.0"
       },
       "system": "aarch64-darwin",
       "group": "toplevel",
