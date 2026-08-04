@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # This script detects your CPU architecture and installs the correct .deb automatically.
 # The .deb lays down a root-owned /nix store and a multi-user nix.conf, but in a
 # container build it does NOT create the nixbld build users (see step 3).
-RUN curl https://downloads.flox.dev/by-env/stable/deb/flox-1.13.1.aarch64-linux.deb \
+RUN curl https://downloads.flox.dev/by-env/stable/deb/flox-1.14.0.aarch64-linux.deb \
     -o flox.aarch64-linux.deb && \
     dpkg -i flox.aarch64-linux.deb && \
     rm flox.aarch64-linux.deb
