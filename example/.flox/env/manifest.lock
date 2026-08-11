@@ -45,17 +45,17 @@
     {
       "attr_path": "gh",
       "broken": false,
-      "derivation": "/nix/store/gdhn36xxk55v4k7p3v7yndjy7xry79ws-gh-2.97.0.drv",
+      "derivation": "/nix/store/dlq52339yzagn7qkj8mlhnybqphr02zb-gh-2.97.0.drv",
       "description": "GitHub CLI tool",
       "install_id": "gh",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "gh-2.97.0",
       "pname": "gh",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T04:59:01.074562Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T04:58:48.554298Z",
       "stabilities": [
         "unstable"
       ],
@@ -78,13 +78,13 @@
       "description": "GitHub CLI tool",
       "install_id": "gh",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "gh-2.97.0",
       "pname": "gh",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:33:39.217641Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:28:14.156425Z",
       "stabilities": [
         "unstable"
       ],
@@ -107,13 +107,13 @@
       "description": "GitHub CLI tool",
       "install_id": "gh",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "gh-2.97.0",
       "pname": "gh",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T06:12:17.830428Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T06:01:18.608621Z",
       "stabilities": [
         "unstable"
       ],
@@ -132,17 +132,17 @@
     {
       "attr_path": "hello",
       "broken": false,
-      "derivation": "/nix/store/lvr08sbgczxiy7299l5a1adss05fn4r7-hello-2.12.3.drv",
+      "derivation": "/nix/store/gbr6fylg5c70i2s5jn1877qbzzncrjfq-hello-2.12.3.drv",
       "description": "Program that produces a familiar, friendly greeting",
       "install_id": "hello",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "hello-2.12.3",
       "pname": "hello",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T04:59:15.363941Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T04:59:02.614866Z",
       "stabilities": [
         "unstable"
       ],
@@ -165,13 +165,13 @@
       "description": "Program that produces a familiar, friendly greeting",
       "install_id": "hello",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "hello-2.12.3",
       "pname": "hello",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:33:56.777461Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:28:31.732653Z",
       "stabilities": [
         "unstable"
       ],
@@ -194,13 +194,13 @@
       "description": "Program that produces a familiar, friendly greeting",
       "install_id": "hello",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "hello-2.12.3",
       "pname": "hello",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T06:12:36.446574Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T06:01:36.799569Z",
       "stabilities": [
         "unstable"
       ],
@@ -219,17 +219,17 @@
     {
       "attr_path": "jq",
       "broken": false,
-      "derivation": "/nix/store/kcqi2l7cbwha05a44fj4ajdr871ygf3j-jq-1.8.2.drv",
+      "derivation": "/nix/store/zrjlh9r4lqvfr6a0v8299z6lqmnjhs2p-jq-1.8.2.drv",
       "description": "Lightweight and flexible command-line JSON processor",
       "install_id": "jq",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "jq-1.8.2",
       "pname": "jq",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T04:59:16.816978Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T04:59:04.126341Z",
       "stabilities": [
         "unstable"
       ],
@@ -257,13 +257,13 @@
       "description": "Lightweight and flexible command-line JSON processor",
       "install_id": "jq",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "jq-1.8.2",
       "pname": "jq",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:33:59.146564Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:28:34.141224Z",
       "stabilities": [
         "unstable"
       ],
@@ -291,13 +291,13 @@
       "description": "Lightweight and flexible command-line JSON processor",
       "install_id": "jq",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "jq-1.8.2",
       "pname": "jq",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T06:12:39.041460Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T06:01:39.371189Z",
       "stabilities": [
         "unstable"
       ],
@@ -322,17 +322,17 @@
     {
       "attr_path": "tree",
       "broken": false,
-      "derivation": "/nix/store/5mz7k8cbkcmb0wkmw2hd482zbph9mbxy-tree-2.3.2.drv",
+      "derivation": "/nix/store/svyk0s6lr436gra6nysf73a7ywr5q3m0-tree-2.3.2.drv",
       "description": "Command to produce a depth indented directory listing",
       "install_id": "tree",
       "license": "GPL-2.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "tree-2.3.2",
       "pname": "tree",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:01:19.353732Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:01:05.791962Z",
       "stabilities": [
         "unstable"
       ],
@@ -357,13 +357,13 @@
       "description": "Command to produce a depth indented directory listing",
       "install_id": "tree",
       "license": "GPL-2.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "tree-2.3.2",
       "pname": "tree",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:36:36.063248Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:31:11.282748Z",
       "stabilities": [
         "unstable"
       ],
@@ -388,13 +388,13 @@
       "description": "Command to produce a depth indented directory listing",
       "install_id": "tree",
       "license": "GPL-2.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "tree-2.3.2",
       "pname": "tree",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T06:15:22.627503Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T06:04:21.342592Z",
       "stabilities": [
         "unstable"
       ],
@@ -415,17 +415,17 @@
     {
       "attr_path": "vim",
       "broken": false,
-      "derivation": "/nix/store/kzixm3j1hla6lksml5yfl6n3hixqy5zi-vim-9.2.0782.drv",
+      "derivation": "/nix/store/ln4cd9cmnmi7ds1jzhlidq4daslqvjb6-vim-9.2.0782.drv",
       "description": "Most popular clone of the VI editor",
       "install_id": "vim",
       "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "vim-9.2.0782",
       "pname": "vim",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:01:42.429200Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:01:30.952913Z",
       "stabilities": [
         "unstable"
       ],
@@ -450,13 +450,13 @@
       "description": "Most popular clone of the VI editor",
       "install_id": "vim",
       "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "vim-9.2.0782",
       "pname": "vim",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:37:03.058210Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:31:39.795029Z",
       "stabilities": [
         "unstable"
       ],
@@ -481,13 +481,13 @@
       "description": "Most popular clone of the VI editor",
       "install_id": "vim",
       "license": "Vim",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "vim-9.2.0782",
       "pname": "vim",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T06:15:50.060715Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T06:04:49.966977Z",
       "stabilities": [
         "unstable"
       ],
@@ -508,15 +508,15 @@
     {
       "attr_path": "watch",
       "broken": false,
-      "derivation": "/nix/store/65bi4jqga4bwzzgla3g9j5hlv254mjrv-watch-procps-4.0.6.drv",
+      "derivation": "/nix/store/ls4h3dwi9fdwq1w7n9byvjwapzniif8f-watch-procps-4.0.6.drv",
       "install_id": "watch",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "watch-procps-4.0.6",
       "pname": "watch",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:01:54.181127Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:01:42.467466Z",
       "stabilities": [
         "unstable"
       ],
@@ -537,13 +537,13 @@
       "broken": false,
       "derivation": "/nix/store/b8x611r3wwjc02k747qiaq68i58sqg06-watch-procps-4.0.6.drv",
       "install_id": "watch",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "watch-procps-4.0.6",
       "pname": "watch",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:37:17.046133Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:31:53.024391Z",
       "stabilities": [
         "unstable"
       ],
@@ -564,13 +564,13 @@
       "broken": false,
       "derivation": "/nix/store/926l6w8aiak46jlmdmsysbalyarpgvyj-watch-procps-4.0.6.drv",
       "install_id": "watch",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "watch-procps-4.0.6",
       "pname": "watch",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T06:16:03.741592Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T06:05:03.765739Z",
       "stabilities": [
         "unstable"
       ],
@@ -589,17 +589,17 @@
     {
       "attr_path": "wget",
       "broken": false,
-      "derivation": "/nix/store/iza7knig20wxrr2mvhrv97lkrfhlwwdy-wget-1.25.0.drv",
+      "derivation": "/nix/store/ckwaxgn7k0jy0ixzsqcxcc69bhkpxpyl-wget-1.25.0.drv",
       "description": "Tool for retrieving files using HTTP, HTTPS, and FTP",
       "install_id": "wget",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "wget-1.25.0",
       "pname": "wget",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:01:54.564643Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:01:42.863799Z",
       "stabilities": [
         "unstable"
       ],
@@ -625,13 +625,13 @@
       "description": "Tool for retrieving files using HTTP, HTTPS, and FTP",
       "install_id": "wget",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "wget-1.25.0",
       "pname": "wget",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T05:37:17.897944Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T05:31:53.820484Z",
       "stabilities": [
         "unstable"
       ],
@@ -657,13 +657,13 @@
       "description": "Tool for retrieving files using HTTP, HTTPS, and FTP",
       "install_id": "wget",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=643809054d65fdd466a63e3155b8c498cb483c04",
       "name": "wget-1.25.0",
       "pname": "wget",
-      "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
-      "rev_count": 1045728,
-      "rev_date": "2026-08-01T07:59:56Z",
-      "scrape_date": "2026-08-02T06:16:04.613130Z",
+      "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
+      "rev_count": 1046609,
+      "rev_date": "2026-08-02T17:49:26Z",
+      "scrape_date": "2026-08-04T06:05:04.675219Z",
       "stabilities": [
         "unstable"
       ],
@@ -692,7 +692,13 @@
           "pkg-path": "hello"
         }
       },
-      "options": {},
+      "options": {
+        "systems": [
+          "aarch64-darwin",
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
       "include": {
         "environments": [
           {
@@ -747,6 +753,16 @@
         }
       }
     ],
-    "warnings": []
+    "warnings": [
+      {
+        "warning": {
+          "Overriding": [
+            "options",
+            "systems"
+          ]
+        },
+        "higher_priority_name": "Current manifest"
+      }
+    ]
   }
 }
