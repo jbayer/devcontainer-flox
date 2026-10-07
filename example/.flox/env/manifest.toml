@@ -1,12 +1,7 @@
-schema-version = "1.13.0"
+schema-version = "1.17.0"
 
 [install]
 hello.pkg-path = "hello"
-
-[include]
-environments = [
-    { remote = "jbayer/default" }
-]
 
 [options]
 systems = [ "aarch64-darwin", "aarch64-linux", "x86_64-linux" ]
