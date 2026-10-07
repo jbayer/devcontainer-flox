@@ -20,7 +20,8 @@
   ],
   "remoteEnv": {
     "SSH_AUTH_SOCK": "/run/host-services/ssh-auth.sock",
-    "FLOX_AUTOACTIVATE_DIR": "${containerWorkspaceFolder}"
+    "FLOX_AUTOACTIVATE_DIR": "${containerWorkspaceFolder}",
+    "FLOX_HIDE_DEFAULT_PROMPT": "true"
   },
   "postStartCommand": "sudo /usr/local/bin/fix-home-perms.sh && sudo /usr/local/bin/start-nix-daemon.sh",
   "remoteUser": "flox"
