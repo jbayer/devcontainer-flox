@@ -99,7 +99,7 @@ None of the environments include Claude Code by default. Add it to the project (
 ## Building the image
 
 ```sh
-docker buildx build -t jbayer/devcontainer-flox:1.17.0 -t jbayer/devcontainer-flox:latest docker/
+docker buildx build -t jbayer/devcontainer-flox:1.19.2 -t jbayer/devcontainer-flox:latest docker/
 docker push --all-tags jbayer/devcontainer-flox
 ```
 
